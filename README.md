@@ -1,7 +1,7 @@
 # react-utils
 This repository is a set of utility classes and functions for Truefit's React based applications.
 
-Can be found on npm at
+Can be found on npm as [truefit-react-utils](https://www.npmjs.com/package/truefit-react-utils)
 
 ## HTTP
 Helpful wrappers of [Axios](https://github.com/mzabriskie/axios) for HTTP access
