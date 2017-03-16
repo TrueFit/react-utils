@@ -61,7 +61,7 @@ This higher order function returns a reducer for use with Redux. It is intended 
 ```
 import promiseReducer from 'truefit-react-utils';
 
-export default stateReducer([], {
+export default promiseReducer('FOO', [], {
   PENDING: (state, payload) => payload.data,
   FULFILLED: (state, payload) => payload.data,
   REJECTED: (state) => [],
