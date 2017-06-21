@@ -1,14 +1,14 @@
 import {httpFactory} from './http_config';
 
 // verbs
-export const get = (url, params) =>
-  httpFactory.create().get(url, {params});
+export const get = (url, params, headers) =>
+  httpFactory.create(headers).get(url, {params});
 
-export const post = (url, data) =>
-  httpFactory.create().post(url, data);
+export const post = (url, data, headers) =>
+  httpFactory.create(headers).post(url, data);
 
-export const put = (url, data) =>
-  httpFactory.create().put(url, data);
+export const put = (url, data, headers) =>
+  httpFactory.create(headers).put(url, data);
 
-export const httpDelete = (url, params) =>
-  httpFactory.create().delete(url, {params});
+export const httpDelete = (url, params, headers) =>
+  httpFactory.create(headers).delete(url, {params});

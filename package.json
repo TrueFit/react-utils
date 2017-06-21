@@ -1,6 +1,6 @@
 {
   "name": "truefit-react-utils",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "a handy set of utility classes and functions for react apps",
   "main": "lib/index.js",
   "scripts": {
