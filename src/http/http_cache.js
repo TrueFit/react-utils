@@ -6,12 +6,18 @@ export default class HttpCache {
     this.cache = [];
   }
 
+  areEqual(item1, item2) {
+    return equals(item1.url, item2.url)
+        && equals(item1.params, item2.params)
+        && equals(item1.headers, item2.headers);
+  }
+
   exists(url, params, headers) {
-    return _.find(this.cache, x => equals(x, {url, params, headers})) !== null;
+    return this.get(url, params, headers) !== null;
   }
 
   get(url, params, headers) {
-    const item = _.find(this.cache, x => equals(x, {url, params, headers}));
+    const item = _.find(this.cache, x => this.areEqual(x, {url, params, headers}));
     return item ? item.response : null;
   }
 
