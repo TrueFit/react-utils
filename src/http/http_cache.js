@@ -25,6 +25,8 @@ export default class HttpCache {
     const item = {url, params, headers, response};
     this.cache.push(item);
 
-    setTimeout(() => this.cache.filter(x => x === item), cacheTimeout);
+    setTimeout(() => {
+      this.cache = this.cache.filter(x => !this.areEqual(x, item));
+    }, cacheTimeout);
   }
 }
