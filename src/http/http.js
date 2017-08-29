@@ -6,7 +6,8 @@ const cache = new HttpCache();
 
 // verbs
 export const get = (url, params, headers, cacheTimeout) => {
-  const cacheEnabled = httpFactory.config.cacheGetRequests;
+  const config = httpFactory.config();
+  const cacheEnabled = config.cacheGetRequests;
   if (cacheEnabled && cache.exists(url, params, headers)) {
     return Promise.resolve(cache.get(url, params, headers));
   }
@@ -14,7 +15,7 @@ export const get = (url, params, headers, cacheTimeout) => {
   return httpFactory.create(headers).get(url, {params})
     .then(response => {
       if (cacheEnabled) {
-        cache.store(url, params, headers, cacheTimeout, response);
+        cache.store(url, params, headers, cacheTimeout || config.defaultCacheTimeout, response);
       }
 
       return response;
