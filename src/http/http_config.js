@@ -8,7 +8,7 @@ class HttpFactory {
     if (_.isFunction(config)) {
       config = config(headers);
     }
-    
+
     if (headers) {
       config = {
         ...config,
@@ -16,7 +16,7 @@ class HttpFactory {
           ...(config.headers || {}),
           ...headers,
         },
-      }
+      };
     }
 
     return axios.create(config);
