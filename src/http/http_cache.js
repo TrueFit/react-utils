@@ -7,9 +7,9 @@ export default class HttpCache {
   }
 
   areEqual(item1, item2) {
-    return equals(item1.url, item2.url)
-        && equals(item1.params, item2.params)
-        && equals(item1.headers, item2.headers);
+    return equals(item1.url, item2.url) &&
+        equals(item1.params, item2.params) &&
+        equals(item1.headers, item2.headers);
   }
 
   exists(url, params, headers) {

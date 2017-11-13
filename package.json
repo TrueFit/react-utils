@@ -1,6 +1,6 @@
 {
   "name": "truefit-react-utils",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "a handy set of utility classes and functions for react apps",
   "main": "lib/index.js",
   "scripts": {
@@ -19,14 +19,14 @@
   },
   "homepage": "https://github.com/TrueFit/react-utils#readme",
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.17.1",
     "deep-equal": "^1.0.1",
     "lodash": "^4.17.4"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
-    "babel-eslint": "^7.2.3",
+    "babel-eslint": "^8.0.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "eslint": "^4.5.0",

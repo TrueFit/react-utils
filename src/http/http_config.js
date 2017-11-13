@@ -23,11 +23,18 @@ class HttpFactory {
       };
     }
 
-    return axios.create(config);
+    const instance = axios.create(config);
+
+    if (this.configureInstance) {
+      this.configureInstance(instance);
+    }
+
+    return instance;
   }
 }
 export const httpFactory = new HttpFactory();
 
-export const configureHttp = config => {
+export const configureHttp = (config, configureInstance) => {
   httpFactory.config = config;
+  httpFactory.configureInstance = configureInstance;
 };
