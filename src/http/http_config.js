@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import axios from 'axios';
+import addSuccess from './addSuccess';
 
 class HttpFactory {
   config() {
@@ -24,6 +25,7 @@ class HttpFactory {
     }
 
     const instance = axios.create(config);
+    instance.interceptors.response.use(addSuccess);
 
     if (this.configureInstance) {
       this.configureInstance(instance);
