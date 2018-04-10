@@ -30,3 +30,6 @@ export const put = (url, data, headers) =>
 
 export const httpDelete = (url, params, headers) =>
   httpFactory.create(headers).delete(url, {params});
+
+export const httpDeleteData = (url, data, headers) =>
+  httpFactory.create(headers).delete(url, {data});
