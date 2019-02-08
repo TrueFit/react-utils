@@ -22,6 +22,9 @@ export const get = (url, params, headers, cacheTimeout) => {
     });
 };
 
+export const patch = (url, data, headers) =>
+  httpFactory.create(headers).patch(url, data);
+
 export const post = (url, data, headers) =>
   httpFactory.create(headers).post(url, data);
 
