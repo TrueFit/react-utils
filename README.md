@@ -1,9 +1,11 @@
 # react-utils
+
 This repository is a set of utility classes and functions for Truefit's React based applications.
 
 Can be found on npm as [truefit-react-utils](https://www.npmjs.com/package/truefit-react-utils)
 
 ## HTTP
+
 Helpful wrappers of [Axios](https://github.com/mzabriskie/axios) for HTTP access
 
 To get started, you need to pass an axios config object:
@@ -20,30 +22,42 @@ configureHttp({
 
 from there you have four functions available to you, one for each of the http verbs:
 
-* GET
+- GET
+
 ```
 get('user', {id: 1}).then((response) => { // do something });
 ```
 
-* POST
+- POST
+
 ```
 post('user', {name: 'john doe'}).then((response) => { // do something });
 ```
 
-* PUT
+- PUT
+
 ```
 put('user', {id: 1, name: 'john doe'}).then((response) => { // do something });
 ```
 
-* DELETE
+- PATCH
+
+```
+patch('user', {id: 1, name: 'john doe'}).then((response) => { // do something });
+```
+
+- DELETE
+
 ```
 httpDelete('user', {id: 1}).then((response) => { // do something });
 ```
 
 ## Reducers
+
 Higher level functions allowing you to represent a reducer as a state machine instead of the traditional switch statement.
 
 ### State Reducer
+
 This higher order function returns a reducer for use with Redux. It accepts the initial state of the reducer and a set of states.
 
 ```
@@ -56,6 +70,7 @@ export default stateReducer([], {
 ```
 
 ### Promise Reducer
+
 This higher order function returns a reducer for use with Redux. It is intended for use with redux-promise-middleware. It accepts the root action type, the initial state of the reducer and a set of states. It will match the root action type with the generated types returned by the middleware.
 
 ```
