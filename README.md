@@ -1,5 +1,12 @@
 # react-utils
 
+_This repo is now deprecated._ It has been split into two different packages:
+
+- [truefit-http-utils](https://github.com/truefit/http-utils)
+- [truefit-redux-utils](https://github.com/truefit/redux-utils)
+
+## Old
+
 This repository is a set of utility classes and functions for Truefit's React based applications.
 
 Can be found on npm as [truefit-react-utils](https://www.npmjs.com/package/truefit-react-utils)
